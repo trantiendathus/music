@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient từ màu cam sang hồng */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden; /* Đảm bảo iframe không bị cuộn ra ngoài */
+}
+
+.player-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    position: relative; /* Đảm bảo box nhạc không bị đè */
+    z-index: 10; /* Đảm bảo box nhạc nằm trên iframe */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.time-display {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.audio-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.audio-controls button,
+.audio-controls input {
+    margin: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7e5f;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #feb47b;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+iframe#animeIframe {
+    position: fixed;
+    width: 300px;
+    height: 200px;
+    border: none;
+    z-index: 5; /* Đặt độ ưu tiên thấp hơn box nhạc nhưng cao hơn nền */
+    transition: all 2s ease; /* Di chuyển mượt mà */
+}

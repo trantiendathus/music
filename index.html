@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="player-container">
+        <h1>Danh sách nhạc</h1>
+        <select id="songList" onchange="playSelectedSong()">
+            <option value="" disabled selected>Chọn bài hát</option>
+            <option value="https://files.catbox.moe/494z4l.mp3">QUỐC CA VIỆT NAM (Tiến Quân Ca)</option>
+            <option value="https://files.catbox.moe/ide3uy.mp3">Đừng Làm Trái Tim Anh Đau x Obito</option>
+            <option value="https://files.catbox.moe/typrw7.mp3">Nhạc Tự Làm</option>
+            <option value="https://files.catbox.moe/qtjs50.mp3">Một Đường Nở Hoa</option>
+            <option value="https://files.catbox.moe/btpf4b.mp3">Nếu Ví Anh Như - Lê Bảo</option>
+            <option value="https://files.catbox.moe/x2d0bn.mp3">Khum Biết</option>
+            <option value="https://files.catbox.moe/h8o8f6.mp3">Như Anh Đã Thấy Em</option>
+            <option value="https://files.catbox.moe/c7fky1.mp3" selected>Tình Đầu</option>
+            <option value="https://files.catbox.moe/nez78w.mp3">Xin Lỗi Vì Đã Yêu Nhau - Hoài Lâm</option>
+            <option value="https://files.catbox.moe/hjc95z.mp3">Giấc Mơ Có Thật - Orange</option>
+            <option value="https://files.catbox.moe/09fmj9.mp3">Goodbye My Princess</option>
+            <option value="https://files.catbox.moe/hjatth.mp3">That Girl x Talking To The Moon (Remake)</option>
+            <option value="https://files.catbox.moe/h13msn.mp3">Anh Sẽ Luôn Thật Gần - Trần Thanh Huyền</option>
+        </select>
+
+        <div class="time-display">
+            <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
+        </div>
+
+        <div class="audio-controls">
+            <button id="playPauseBtn">Play</button>
+            <button id="stopBtn">Stop</button>
+            <input type="range" id="seekBar" value="0" min="0" max="100">
+            <input type="range" id="volumeBar" value="100" min="0" max="100">
+        </div>
+        
+        <audio id="audioPlayer"></audio>
+    </div>
+
+    <iframe id="animeIframe" src="https://api.thanhdieu.com/anime-cb.php" frameborder="0" class="animated"></iframe>
+
+    <script src="script.js"></script>
+</body>
+</html>
